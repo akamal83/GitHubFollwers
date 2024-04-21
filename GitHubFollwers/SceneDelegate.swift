@@ -8,7 +8,7 @@
 //building search screen end 01:40:00
 //handle the keyboard stuff
 //get button to action
-//Passing data between views end 02:05:00
+//create custom alert end 02:46:00 (pushed  git)
 
 import UIKit
 
