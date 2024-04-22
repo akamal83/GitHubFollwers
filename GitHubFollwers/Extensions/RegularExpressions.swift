@@ -1,9 +1,6 @@
-//
 //  Regular Expressions.swift
 //  GitHubFollwers
-//
 //  Created by Ahmed Kamal on 21/04/2024.
-//
 
 import Foundation
 
@@ -14,18 +11,15 @@ extension String {
         return emailPredicate.evaluate(with: self)
     }
     
-    
     var isValidPassword: Bool {
         //Regex stricts to 8 characters minimum, 1 capital letter, 1 lowercase letter, and 1 number
         let passwordFormat = "(?=.*[A-Z])(?=.*[0-9])(?=.*[a-z]).{8,}"
         let passwordPredicate = NSPredicate(format: "SELF MATCHES %@", passwordFormat)
         return passwordPredicate.evaluate(with: self)
     }
-    
-    
-    //Regex for GitHub username:
-    //Alphanumeric
-    //can include "-"
-    //no consecutive "-"
-    //can't start or end with "-"
 }
+//Regex for GitHub username:
+//Alphanumeric
+//can include "-"
+//no consecutive "-"
+//can't start or end with "-"

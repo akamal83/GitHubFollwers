@@ -1,20 +1,17 @@
-//
 //  SearchVCViewController.swift
 //  GitHubFollwers
-//
 //  Created by Ahmed Kamal on 20/04/2024.
-//
 
 import UIKit
 
 class SearchVC: UIViewController {
     
     let logoImageView      = UIImageView()
-    let userNameTextField  = GFTextField()
+    let usernameTextField  = GFTextField()
     let callToActionButton = GFButton(backgroundColor: .systemGreen, title: "Get Followers")
     
-    var isUserNameEntered: Bool {
-        return !userNameTextField.text!.isEmpty
+    var isUsernameEntered: Bool {
+        return !usernameTextField.text!.isEmpty
     }
 
     override func viewDidLoad() {
@@ -29,7 +26,7 @@ class SearchVC: UIViewController {
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        navigationController?.isNavigationBarHidden = true
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     
@@ -40,13 +37,14 @@ class SearchVC: UIViewController {
     
     
     @objc func pushFollowerListVC() {
-        guard isUserNameEntered else {
+        guard isUsernameEntered else {
             presentGFAlertOnMainThread(title: "Empty Username", message: "Please enter a valid username!", buttonTitle: "OKAY")
             return
             }
-        let followerListVC = FollowerListVC()
-        followerListVC.userName = userNameTextField.text
-        followerListVC.title = userNameTextField.text
+        
+        let followerListVC      = FollowerListVC()
+        followerListVC.username = usernameTextField.text
+        followerListVC.title    = usernameTextField.text
         navigationController?.pushViewController(followerListVC, animated: true)
     }
     
@@ -66,14 +64,14 @@ class SearchVC: UIViewController {
     
     
     func configureTextField() {
-        view.addSubview(userNameTextField)
-        userNameTextField.delegate = self
+        view.addSubview(usernameTextField)
+        usernameTextField.delegate = self
         
         NSLayoutConstraint.activate([
-            userNameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
-            userNameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
-            userNameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
-            userNameTextField.heightAnchor.constraint(equalToConstant: 50)
+            usernameTextField.topAnchor.constraint(equalTo: logoImageView.bottomAnchor, constant: 48),
+            usernameTextField.leadingAnchor.constraint(equalTo: view.leadingAnchor, constant: 50),
+            usernameTextField.trailingAnchor.constraint(equalTo: view.trailingAnchor, constant: -50),
+            usernameTextField.heightAnchor.constraint(equalToConstant: 50)
         ])
     }
     

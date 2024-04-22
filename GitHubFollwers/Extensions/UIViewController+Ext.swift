@@ -1,9 +1,6 @@
-//
 //  UIViewController+Ext.swift
 //  GitHubFollwers
-//
 //  Created by Ahmed Kamal on 21/04/2024.
-//
 
 import UIKit
 

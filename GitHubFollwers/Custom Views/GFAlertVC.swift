@@ -1,18 +1,15 @@
-//
 //  GFAlertVCViewController.swift
 //  GitHubFollwers
-//
 //  Created by Ahmed Kamal on 21/04/2024.
-//
 
 import UIKit
 
 class GFAlertVC: UIViewController {
     
     let containerView = UIView()
-    let titleLabel = GFTitleLabel(textAlignment: .center, fontSize: 20)
-    let messageLabel = GFBodyLabel(textAlignment: .center)
-    let actionButton = GFButton(backgroundColor: .systemPink, title: "OKAY")
+    let titleLabel    = GFTitleLabel(textAlignment: .center, fontSize: 20)
+    let messageLabel  = GFBodyLabel(textAlignment: .center)
+    let actionButton  = GFButton(backgroundColor: .systemPink, title: "OKAY")
     
     var alertTitle: String?
     var message: String?
@@ -24,8 +21,8 @@ class GFAlertVC: UIViewController {
     init(title: String, message: String, buttonTitle: String) {
         super.init(nibName: nil, bundle: nil)
         
-        self.alertTitle = title
-        self.message = message
+        self.alertTitle  = title
+        self.message     = message
         self.buttonTitle = buttonTitle
     }
     
@@ -47,7 +44,7 @@ class GFAlertVC: UIViewController {
     
     func configureContainerView() {
         view.addSubview(containerView)
-        containerView.backgroundColor = .systemBackground
+        containerView.backgroundColor                           = .systemBackground
         containerView.layer.cornerRadius                        = 16
         containerView.layer.borderWidth                         = 2
         containerView.layer.borderColor                         = UIColor.white.cgColor
@@ -56,7 +53,7 @@ class GFAlertVC: UIViewController {
         NSLayoutConstraint.activate([
             containerView.centerYAnchor.constraint(equalTo: view.centerYAnchor),
             containerView.centerXAnchor.constraint(equalTo: view.centerXAnchor),
-            containerView.widthAnchor.constraint(equalToConstant: 200),
+            containerView.widthAnchor.constraint(equalToConstant: 350),
             containerView.heightAnchor.constraint(equalToConstant: 200)
         ])
     }
@@ -100,7 +97,6 @@ class GFAlertVC: UIViewController {
             messageLabel.bottomAnchor.constraint(equalTo: actionButton.topAnchor, constant: -12)
         ])
     }
-    
     
     
     @objc func dismissVC() {

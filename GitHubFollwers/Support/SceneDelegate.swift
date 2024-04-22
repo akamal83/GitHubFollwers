@@ -1,14 +1,6 @@
-//
 //  SceneDelegate.swift
 //  GitHubFollwers
-//
 //  Created by Ahmed Kamal on 20/04/2024.
-// stopped at 58:00 Ahmed Kamal
-//building the search screen(custom UIbutton and UITextField end 01:18:30
-//building search screen end 01:40:00
-//handle the keyboard stuff
-//get button to action
-//create custom alert end 02:46:00 (pushed  git)
 
 import UIKit
 
@@ -20,8 +12,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         guard let windowScene = (scene as? UIWindowScene) else { return }
         
-        window = UIWindow(frame: windowScene.coordinateSpace.bounds)
-        window?.windowScene = windowScene
+        window                     = UIWindow(frame: windowScene.coordinateSpace.bounds)
+        window?.windowScene        = windowScene
         window?.rootViewController = createTabbar()
         window?.makeKeyAndVisible()
         
@@ -30,25 +22,25 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     
     func createSearcNC() -> UINavigationController {
-        let searchVC = SearchVC()
-        searchVC.title = "Search"
+        let searchVC        = SearchVC()
+        searchVC.title      = "Search"
         searchVC.tabBarItem = UITabBarItem(tabBarSystemItem: .search, tag: 0)
         return UINavigationController(rootViewController: searchVC)
     }
     
     
     func createFavoritesNC() -> UINavigationController {
-        let favoritesListVC = FavoritesListVC()
-        favoritesListVC.title = "Favorites"
+        let favoritesListVC        = FavoritesListVC()
+        favoritesListVC.title      = "Favorites"
         favoritesListVC.tabBarItem = UITabBarItem(tabBarSystemItem: .favorites, tag: 1)
         return UINavigationController(rootViewController: favoritesListVC)
     }
     
     
     func createTabbar() -> UITabBarController {
-        let tabbar = UITabBarController()
+        let tabbar                      = UITabBarController()
         UITabBar.appearance().tintColor = .systemGreen
-        tabbar.viewControllers = [createSearcNC(), createFavoritesNC()]
+        tabbar.viewControllers          = [createSearcNC(), createFavoritesNC()]
         return tabbar
     }
     
