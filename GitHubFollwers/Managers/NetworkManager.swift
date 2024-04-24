@@ -2,11 +2,12 @@
 //  GitHubFollwers
 //  Created by Ahmed Kamal on 21/04/2024.
 
-import Foundation
+import UIKit
 
 class NetworkManager {
     static let shared   = NetworkManager()
-    let baseURL: String = "https://api.github.com/users/"
+    private let baseURL: String = "https://api.github.com/users/"
+    let cache = NSCache<NSString, UIImage>()
     
     private init(){}
     

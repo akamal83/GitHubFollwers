@@ -22,6 +22,7 @@
 		FE9247CC2BD66167003AA140 /* FollowerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9247CB2BD66167003AA140 /* FollowerCell.swift */; };
 		FE9247CE2BD66267003AA140 /* GFAvatarImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9247CD2BD66267003AA140 /* GFAvatarImageView.swift */; };
 		FE9247D02BD7238B003AA140 /* File in Resources */ = {isa = PBXBuildFile; fileRef = FE9247CF2BD7238B003AA140 /* File */; };
+		FE9DE5632BD7C777000686E3 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9DE5622BD7C777000686E3 /* UIHelper.swift */; };
 		FE9EEC612BD5A338009745B1 /* Follower.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9EEC602BD5A338009745B1 /* Follower.swift */; };
 		FE9EEC632BD5A436009745B1 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9EEC622BD5A436009745B1 /* User.swift */; };
 		FE9EEC662BD5BCB1009745B1 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = FE9EEC652BD5BCB1009745B1 /* NetworkManager.swift */; };
@@ -48,6 +49,7 @@
 		FE9247CB2BD66167003AA140 /* FollowerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowerCell.swift; sourceTree = "<group>"; };
 		FE9247CD2BD66267003AA140 /* GFAvatarImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFAvatarImageView.swift; sourceTree = "<group>"; };
 		FE9247CF2BD7238B003AA140 /* File */ = {isa = PBXFileReference; lastKnownFileType = text; path = File; sourceTree = "<group>"; };
+		FE9DE5622BD7C777000686E3 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		FE9EEC602BD5A338009745B1 /* Follower.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Follower.swift; sourceTree = "<group>"; };
 		FE9EEC622BD5A436009745B1 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		FE9EEC652BD5BCB1009745B1 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
@@ -172,6 +174,7 @@
 			isa = PBXGroup;
 			children = (
 				FE9EEC682BD5EE30009745B1 /* ErrorMessage.swift */,
+				FE9DE5622BD7C777000686E3 /* UIHelper.swift */,
 			);
 			path = Utilities;
 			sourceTree = "<group>";
@@ -262,6 +265,7 @@
 				FEF1EE992BD48D230078D380 /* FollowerListVC.swift in Sources */,
 				FE390AD12BD3FF630046C062 /* SceneDelegate.swift in Sources */,
 				FE9EEC692BD5EE30009745B1 /* ErrorMessage.swift in Sources */,
+				FE9DE5632BD7C777000686E3 /* UIHelper.swift in Sources */,
 				FE9EEC662BD5BCB1009745B1 /* NetworkManager.swift in Sources */,
 				FE390AE32BD40AFC0046C062 /* SearchVC.swift in Sources */,
 				FE7C85DF2BD5455F00D2651D /* GFBodyLabel.swift in Sources */,
