@@ -1,9 +1,6 @@
-//
-//  ErrorMessage.swift
+//  GFError.swift
 //  GitHubFollwers
-//
-//  Created by Ahmed Kamal on 22/04/2024.
-//
+//  Created by Ahmed Kamal on 25/04/2024.
 
 import Foundation
 

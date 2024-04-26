@@ -1,2 +1,45 @@
 GFAvatarImageView.swift line: 26; set back to false
 just finished 06:50:00 of the course
+06:51:00 Model & Passing Data
+07:06:00 network call - get user data
+UserInfoVC Cleanup 08:06:00
+
+
+userInfoVC
+    GFUserInfoHeaderVC() =
+        1. avatar
+        2. name
+        3. bio
+        4.location
+        5.location SFsymbol
+    
+    GFUserInfoCardVC() in a stackview
+        view1
+            1. GFUserInfoItemVC() --reusable--
+            2. icon
+            3. public repos count
+        view2
+            1.public gists label
+            public gists count
+        button
+    
+    GFUdserInfoCard2 in a stackview
+        view1
+            1.following SFsymbol
+            2.following label
+            3. following count
+        view2
+            1.followers SFsybol
+            2.followers label
+            3.followers count
+        button
+    
+    label with a formatted date
+            
+Closures are non-escaping by default
+user info UI planning(composing)
+viewControllers vs views
+VC:
+    1. access to lifecyle methods
+    2. VC are self contained
+    3. flexible context
