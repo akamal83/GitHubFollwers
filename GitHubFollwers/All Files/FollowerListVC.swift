@@ -99,10 +99,6 @@ extension FollowerListVC: UICollectionViewDelegate {
         let contentHeight = scrollView.contentSize.height
         let height = scrollView.frame.size.height
         
-        print("offsetY = \(offsetY)")
-        print("contentHeight = \(contentHeight)")
-        print("height = \(height)")
-        
         if offsetY > contentHeight - height {
             guard hasMoreFollowers else { return }
             page += 1
@@ -117,6 +113,7 @@ extension FollowerListVC: UICollectionViewDelegate {
         let destVC = UserInfoVC()
         destVC.username = follower.login
         //let navController = UINavigationController(rootViewController: destVC)
+        
         present(destVC, animated: true)
     }
 }

@@ -1,9 +1,6 @@
-//
 //  GFRepoItemVC.swift
 //  GitHubFollwers
-//
 //  Created by Ahmed Kamal on 27/04/2024.
-//
 
 import UIKit
 
