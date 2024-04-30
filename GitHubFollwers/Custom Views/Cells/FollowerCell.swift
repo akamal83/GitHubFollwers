@@ -1,7 +1,3 @@
-////Innitial setup -- Flow layout -- Diffable data source -- Refactor
-//  FollowerCell.swift
-//  GitHubFollwers
-//  Created by Ahmed Kamal on 22/04/2024.
 import UIKit
 
 class FollowerCell: UICollectionViewCell {
