@@ -1,7 +1,3 @@
-//  GFTitleLabel.swift
-//  GitHubFollwers
-//  Created by Ahmed Kamal on 21/04/2024.
-
 import UIKit
 
 class GFTitleLabel: UILabel {
@@ -15,11 +11,10 @@ class GFTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
-        super.init(frame: .zero)
+    convenience init(textAlignment: NSTextAlignment, fontSize: CGFloat) {
+        self.init(frame: .zero)
         self.textAlignment = textAlignment
         self.font = UIFont.systemFont(ofSize: fontSize, weight: .bold)
-        configure()
     }
     
     

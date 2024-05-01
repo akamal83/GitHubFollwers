@@ -1,7 +1,3 @@
-//  AppDelegate.swift
-//  GitHubFollwers
-//  Created by Ahmed Kamal on 20/04/2024.
-
 import UIKit
 
 @main

@@ -1,10 +1,6 @@
-//  UIHelper.swift
-//  GitHubFollwers
-//  Created by Ahmed Kamal on 23/04/2024.
-
 import UIKit
 
-struct UIHelper {
+enum UIHelper {
     
     static func createThreeColumnFlowLayout(in view: UIView) -> UICollectionViewFlowLayout {
         let width                       = view.bounds.width

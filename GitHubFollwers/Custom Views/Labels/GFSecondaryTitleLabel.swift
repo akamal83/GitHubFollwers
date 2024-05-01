@@ -1,7 +1,3 @@
-//  GFSecondaryTitleLabel.swift
-//  GitHubFollwers
-//  Created by Ahmed Kamal on 25/04/2024.
-
 import UIKit
 
 class GFSecondaryTitleLabel: UILabel {
@@ -15,10 +11,9 @@ class GFSecondaryTitleLabel: UILabel {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(fontSize: CGFloat) {
-        super.init(frame: .zero)
+    convenience init(fontSize: CGFloat) {
+        self.init(frame: .zero)
         font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
-        configure()
     }
     
     
@@ -28,7 +23,5 @@ class GFSecondaryTitleLabel: UILabel {
         minimumScaleFactor                        = 0.90
         lineBreakMode                             = .byTruncatingTail
         translatesAutoresizingMaskIntoConstraints = false
-        //numberOfLines                             = 0
-        //font                                    = UIFont.preferredFont(forTextStyle: .body)
     }
 }

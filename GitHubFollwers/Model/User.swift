@@ -1,7 +1,3 @@
-//  User.swift
-//  GitHubFollwers
-//  Created by Ahmed Kamal on 21/04/2024.
-
 import Foundation
 
 struct User: Codable {
@@ -15,5 +11,5 @@ struct User: Codable {
     let htmlUrl    : String
     let following  : Int
     let followers  : Int
-    let createdAt  : String
+    let createdAt  : Date
 }

@@ -1,11 +1,9 @@
-//
-//  GFItemInfoVC.swift
-//  GitHubFollwers
-//
-//  Created by Ahmed Kamal on 26/04/2024.
-//
-
 import UIKit
+
+protocol ItemInfoVCDelegate: AnyObject {
+    func didTapGitHubProfile(for user: User)
+    func didTapGetFollowers(for user: User)
+}
 
 class GFItemInfoVC: UIViewController {
     
@@ -15,7 +13,7 @@ class GFItemInfoVC: UIViewController {
     let actionButton = GFButton()
     
     var user: User!
-    weak var delegate: UserInfoVCDelegate!
+    
     
     init(user: User) {
         super.init(nibName: nil, bundle: nil)
@@ -26,6 +24,7 @@ class GFItemInfoVC: UIViewController {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         configureBackgroundView()
@@ -34,10 +33,12 @@ class GFItemInfoVC: UIViewController {
         configureStackview()
     }
     
+    
     private func configureBackgroundView() {
         view.layer.cornerRadius = 18
         view.backgroundColor = .secondarySystemBackground
     }
+    
     
     private func configureStackview() {
         stackView.axis = .horizontal
@@ -47,15 +48,17 @@ class GFItemInfoVC: UIViewController {
         stackView.addArrangedSubview(itemInfoViewTwo)
     }
     
+    
     private func configureActionButton() {
         actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
     }
     
+    
     @objc func actionButtonTapped() {}
     
+    
     private func layoutUI(){
-        view.addSubview(stackView)
-        view.addSubview(actionButton)
+        view.addSubviews(stackView, actionButton)
         
         stackView.translatesAutoresizingMaskIntoConstraints = false
         
